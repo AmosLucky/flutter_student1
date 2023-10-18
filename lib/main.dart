@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_student1/column_tutorial.dart';
 import 'package:flutter_student1/form_tutorial.dart';
+import 'package:flutter_student1/gridview_tutorial.dart';
 import 'package:flutter_student1/layout_tutorial.dart';
 import 'package:flutter_student1/list_tutorial.dart';
 import 'package:flutter_student1/listview_builder_tutorial.dart';
 import 'package:flutter_student1/row_tutorial.dart';
 
 import 'layout_practical.dart';
-
 
 void main() {
   runApp(MyOwnApp());
@@ -18,9 +18,7 @@ class MyOwnApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyApp());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: MyApp());
   }
 }
 
@@ -75,7 +73,8 @@ class MyApp extends StatelessWidget {
                   width: 300,
                   child: MaterialButton(
                     onPressed: () {
-                      var route =  MaterialPageRoute(builder: (BuildContext)=>RowTutorial());
+                      var route = MaterialPageRoute(
+                          builder: (BuildContext) => RowTutorial());
                       Navigator.push(context, route);
                     },
                     child: Text("Row tutorial"),
@@ -83,85 +82,89 @@ class MyApp extends StatelessWidget {
                     textColor: Colors.white,
                   ),
                 ),
-
                 Container(
                   width: 300,
                   margin: EdgeInsets.only(top: 10),
                   child: MaterialButton(
-                    onPressed: (){
-                      var route = MaterialPageRoute(builder: (BuildContext)=>LayoutTutorial());
+                    onPressed: () {
+                      var route = MaterialPageRoute(
+                          builder: (BuildContext) => LayoutTutorial());
                       Navigator.push(context, route);
                     },
                     child: Text("Layout / image tutoial"),
                     color: Colors.red,
                     textColor: Colors.white,
-                    
-
                   ),
                 ),
-
                 Container(
                   width: 300,
                   margin: EdgeInsets.only(top: 10),
                   child: MaterialButton(
                     color: Colors.black,
                     textColor: Colors.white,
-                    onPressed: (){
-                      var route = MaterialPageRoute(builder: (BuildContext)=>LayoutPractical());
+                    onPressed: () {
+                      var route = MaterialPageRoute(
+                          builder: (BuildContext) => LayoutPractical());
                       Navigator.push(context, route);
                     },
                     child: Text("Layout practical"),
                   ),
-
                 ),
-
-                 Container(
+                Container(
                   width: 300,
                   margin: EdgeInsets.only(top: 10),
                   child: MaterialButton(
                     color: Colors.pinkAccent,
                     textColor: Colors.white,
-                    onPressed: (){
-                      var route = MaterialPageRoute(builder: (BuildContext)
-                      =>FormTutorial());
+                    onPressed: () {
+                      var route = MaterialPageRoute(
+                          builder: (BuildContext) => FormTutorial());
                       Navigator.push(context, route);
                     },
                     child: Text("Form tutorial"),
                   ),
-
                 ),
-
-
                 Container(
                   width: 300,
                   margin: EdgeInsets.only(top: 10),
                   child: MaterialButton(
                     color: Colors.pinkAccent,
                     textColor: Colors.white,
-                    onPressed: (){
-                      var route = MaterialPageRoute(builder: (BuildContext)
-                      =>ListTutorial());
+                    onPressed: () {
+                      var route = MaterialPageRoute(
+                          builder: (BuildContext) => ListTutorial());
                       Navigator.push(context, route);
                     },
                     child: Text("List tutorial"),
                   ),
-
                 ),
-
                 Container(
                   width: 300,
                   margin: EdgeInsets.only(top: 10),
                   child: MaterialButton(
                     color: Colors.pinkAccent,
                     textColor: Colors.white,
-                    onPressed: (){
-                      var route = MaterialPageRoute(builder: (BuildContext)
-                      =>ListViewMapTutorial());
+                    onPressed: () {
+                      var route = MaterialPageRoute(
+                          builder: (BuildContext) => ListViewMapTutorial());
                       Navigator.push(context, route);
                     },
                     child: Text("List View Map tutorial"),
                   ),
-
+                ),
+                Container(
+                  width: 300,
+                  margin: EdgeInsets.only(top: 10),
+                  child: MaterialButton(
+                    color: Colors.pinkAccent,
+                    textColor: Colors.white,
+                    onPressed: () {
+                      var route = MaterialPageRoute(
+                          builder: (BuildContext) => const GridViewTutorial());
+                      Navigator.push(context, route);
+                    },
+                    child: Text("Grid View Map tutorial"),
+                  ),
                 )
               ],
             )),
