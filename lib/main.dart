@@ -9,6 +9,7 @@ import 'package:flutter_student1/listview_builder_tutorial.dart';
 import 'package:flutter_student1/page_view_tutorial.dart';
 import 'package:flutter_student1/row_tutorial.dart';
 import 'package:flutter_student1/tabbed_bar.dart';
+import 'package:flutter_student1/web_view_tutorial.dart';
 
 import 'layout_practical.dart';
 
@@ -213,6 +214,20 @@ class MyApp extends StatelessWidget {
                         Navigator.push(context, route);
                       },
                       child: const Text("Page View"),
+                    ),
+                  ),
+                  Container(
+                    width: 300,
+                    margin: const EdgeInsets.only(top: 10),
+                    child: MaterialButton(
+                      color: Colors.greenAccent,
+                      textColor: Colors.white,
+                      onPressed: () {
+                        var route = MaterialPageRoute(
+                            builder: (BuildContext) => const WebViewTutorial());
+                        Navigator.push(context, route);
+                      },
+                      child: const Text("Web view"),
                     ),
                   )
                 ],
